@@ -6,10 +6,10 @@ import com.todo.service.TodoSortByDate;
 import com.todo.service.TodoSortByName;
 
 public class TodoList {
-	private List<TodoItem> list;
+	private List<TodoItem> list; //todolist ��ü�� list�� �ٷ�
 
 	public TodoList() {
-		this.list = new ArrayList<TodoItem>();
+		this.list = new ArrayList<TodoItem>(); //todoItem ��ü���� �ϳ��� arraylist�� ����
 	}
 
 	public void addItem(TodoItem t) {
@@ -36,10 +36,9 @@ public class TodoList {
 	}
 
 	public void listAll() {
-		System.out.println("\n"
-				+ "inside list_All method\n");
+		System.out.println("All list\n");
 		for (TodoItem myitem : list) {
-			System.out.println(myitem.getTitle() + myitem.getDesc());
+			System.out.println("[Title] "+myitem.getTitle()+"[Description] " + myitem.getDesc());
 		}
 	}
 	
@@ -51,7 +50,7 @@ public class TodoList {
 		Collections.sort(list, new TodoSortByDate());
 	}
 
-	public int indexOf(TodoItem t) {
+	public int indexOf(TodoItem t) {//Ư����ü�� ���°�� �� �ִ���
 		return list.indexOf(t);
 	}
 
@@ -61,4 +60,6 @@ public class TodoList {
 		}
 		return false;
 	}
+
+	
 }
