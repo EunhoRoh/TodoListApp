@@ -38,7 +38,8 @@ public class TodoList {
 	public void listAll() {
 		System.out.println("All list\n");
 		for (TodoItem myitem : list) {
-			System.out.println("[Title] "+myitem.getTitle()+"[Description] " + myitem.getDesc());
+			System.out.println("[Category] "+myitem.getCategory()+" [Title] "+myitem.getTitle()+" [Description] " + myitem.getDesc()
+			+" [Due_Date] "+myitem.getDue_date()+" [Current_date] "+myitem.getCurrent_date());
 		}
 	}
 	
